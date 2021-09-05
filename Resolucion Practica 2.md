@@ -222,5 +222,10 @@ $x \lor x = x \iff x \leq x$
 
 Además queremos ver que para todo a, b en L existan supremo e infimo.
 
-Definamos supremo como $\lor$ e infimo como $\land$
+Definamos supremo como $\lor$ e infimo como $\land$ y veamos que efectivamente cumplen
+
+Veamos que cumple ser cota superior
+
+$a \leq a \lor b \iff a \lor (a \lor b) = a \lor b \iff (a \lor a) \lor b = a \lor b \iff a \lor b = a \lor b$
+
 
