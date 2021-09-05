@@ -47,38 +47,48 @@ Proponemos:
 - $\lor = + $
 - $\land = \cap $
 
-Asociatividad ∀x , y , z ∈L,
+Debemos probar:
+- Asociatividad ∀x , y , z ∈L,
 {
 x ∨(y ∨z ) = (x ∨y ) ∨z
 x ∧(y ∧z ) = (x ∧y ) ∧z
-Conmutatividad ∀x , y ∈L,
+- Conmutatividad ∀x , y ∈L,
 {
 x ∨y = y ∨x
 x ∧y = y ∧x
-Idempotencia ∀x ∈L,
+- Idempotencia ∀x ∈L,
 {
 x ∨x = x
 x ∧x = x
-Absorci ́on ∀x , y ∈L,
+- Absorción∀x , y ∈L,
 {
 x ∨(x ∧y ) = x
 x ∧(x ∨y ) = x
 }
 
-la suma de espacios vectoriales es asociativa y conmutativa por AL
+Recordemos que la suma de espacios vectoriales es asociativa y conmutativa por AL
 
-- Conmutatividad:\
-$U+V = \{u+v: u \in U, v \in V\} = \{v+u: u \in U, v \in V\} = V+U$
+- Conmutatividad:
+    
+    - $U+V = \{u+v: u \in U, v \in V\} = \{v+u: u \in U, v \in V\} = V+U$
+    
+    - $U \cap V = V \cap U$
 
-- Asociatividad:\
-$(U+V)+W = \{uv+w: uv \in U+V, w \in W\} \\= \{(u+v)+w: u \in U, v \in V, w \in W\} \\= \{u+(v+w): u \in U, v \in V, w \in W\} \\= \{u+vw: u \in U, vw \in V+W\} \\= U+(V+W)$
+- Asociatividad:
+    
+    - $(U+V)+W = \{uv+w: uv \in U+V, w \in W\} \\= \{(u+v)+w: u \in U, v \in V, w \in W\} \\= \{u+(v+w): u \in U, v \in V, w \in W\} \\= \{u+vw: u \in U, vw \in V+W\} \\= U+(V+W)$
+    
+    - $(U \cap V) \cap W = U \cap (V \cap W)$
 
-- Idempotencia:\
-$U+U = \{u+u’: u \in U, u’ \in U\}$ \
-=(Clausura de la suma)\
-$\{u’’: u \in U\} = U$
+- Idempotencia:
+    
+    - $U+U = \{u+u’: u \in U, u’ \in U\}$ \
+    =(Clausura de la suma)\
+    $\{u’’: u \in U\} = U$
 
-- Absorción:\
+    - $U \cap U = U$
+
+- Absorción:
     - $U + (U \cap V) = U$:\
     $U + (U \cap V) = \{u+uv: u \in U, uv \in U, u \in V\}$ \
     = (Clausura de la suma) \
