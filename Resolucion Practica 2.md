@@ -9,13 +9,13 @@ preordenados:
 - transitivas
 - simetricas
 
-parcialmente ordenados (Partially Ordered SET, POSET):
+Conjuntos parcialmente ordenados (Partially Ordered SET, POSET):
 - reflexivas
 - transitivas
 - antisimétricas
 
 retículo/lattice:
-- Poset (L, <=)
+- Poset $(L, <=)$
 - $\forall x, y \in L, \exists \sup \{x, y\}, \inf\{x, y\}$
 
 # 2. Mostrar que los siguientes posets son ret ́ıculos:
@@ -98,4 +98,59 @@ Recordemos que la suma de espacios vectoriales es asociativa y conmutativa por A
     Como $U \subset U+V \implies U \cap U+V = U$
 
 
-d) ́Algebra de Lindenbaum-Tarski.
+d) Álgebra de Lindenbaum-Tarski.
+
+
+
+# Sea (L,≤) un retículo. Se definen las operaciones:
+- x ∨ y = sup{x,y}
+- x ∧ y = inf{x,y}
+
+Probar que para todo x,y,z,w ∈L, ∨ y ∧ verifican las siguientes propiedades:
+
+## a) x ≤ x ∨ y.
+
+$x \lor y = \sup \{x, y\} = \min \{c: x <= c, y <= c\}$
+
+$\therefore x \leq x \lor y$
+
+## b) x ∧y ≤x.
+
+$x \land y = \inf \{x, y\} = \max \{c: c <= x, c <= y\}$
+
+$\therefore x \land y \leq x$
+
+## c) x ≤y ⇔x ∨y = y ⇔x ∧y = x.
+
+$x \leq y = $
+
+d) Asociatividad:
+
+(x ∨y) ∨z = x ∨(y ∨z).
+
+(x ∧y) ∧z = x ∧(y ∧z).
+
+e) Conmutatividad:
+
+x ∨y = y ∨x.
+
+x ∧y = y ∧x.
+
+f) Idempotencia:
+
+x ∨x = x = x ∧x.
+
+g) Absorci ́on:
+
+x ∨(x ∧y) = x = x ∧(x ∨y).
+
+h) Compatibilidad:
+
+x ≤z
+
+y ≤w
+
+}
+=⇒
+{x ∨y ≤z ∨w
+x ∧y ≤z ∧w
