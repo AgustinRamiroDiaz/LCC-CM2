@@ -173,15 +173,57 @@ $x \land y \leq x \implies x \lor (x \land y) = x$
 
 $x \leq x \lor y \implies x = x \land (x \lor y)$
 
-$x \lor ($
-
 h) Compatibilidad:
 
-x ≤z
+x ≤z, y ≤w ⇒ x ∨y ≤z ∨w, x ∧y ≤z ∧w
 
-y ≤w
+$x \leq z \leq z \lor w$
 
-}
-=⇒
-{x ∨y ≤z ∨w
-x ∧y ≤z ∧w
+$y \leq w \leq z \lor w$
+
+Por lo tanto $z \lor w$ es cota superior de {x, y} y por ende $x \lor y \leq z \lor w$
+
+# 4)
+
+## a) Si L= (L,≤) es un ret ́ıculo, entonces las operaciones
+
+- x ∨y = sup{x,y}
+
+- x ∧y = inf{x,y}
+
+definen un ret ́ıculo Lalg = (L,∨,∧).
+
+Demostración:
+Como vimos en el apartado anterior, estas definiciones cumplen con las 4 propiedades de la definición de retículos algebráicos (Asociatividad, conmutatividad, Idempotencia y Absorción) por lo cual Lalg es un retículo
+
+## b) Si L= (L,∨,∧) es un ret ́ıculo, entonces la relaci ́on
+
+x ≤y ⇔x ∨y = y
+
+define un ret ́ıculo Lord = (L,≤).
+
+Demostración:
+
+Veamos que es poset:
+- Reflexividad: Por idempotencia y la definición de la relación <= sabemos que\
+$x \lor x = x \iff x \leq x$
+
+- Transitividad: Sean $a, b, c \in L : a\leq b \leq c$ veamos que $a \leq c$:
+    - $a \leq b \iff a \lor b = b$
+    - $b \leq c \iff b \lor c = c$
+    - $c = b \lor c = (a \lor b) \lor c = a \lor (b \lor c) = a \lor c$ por asociatividad
+    - $\therefore a \leq c$ por def
+
+- Antisimetría: Sean $a, b \in L : a\leq b, b \leq a$ veamos que $a = b$:
+    - $a \leq b \iff a \lor b = b$
+    - $b \leq a \iff b \lor a = a$
+    - $a \lor b = b \lor a$ por asociatividad
+    - $\therefore a = b$
+
+
+
+
+Además queremos ver que para todo a, b en L existan supremo e infimo.
+
+Definamos supremo como $\lor$ e infimo como $\land$
+
