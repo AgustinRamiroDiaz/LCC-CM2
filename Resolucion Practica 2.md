@@ -67,26 +67,25 @@ x ∧(x ∨y ) = x
 
 la suma de espacios vectoriales es asociativa y conmutativa por AL
 
-- Conmutatividad: 
+- Conmutatividad:\
 $U+V = \{u+v: u \in U, v \in V\} = \{v+u: u \in U, v \in V\} = V+U$
 
-- Asociatividad:
-$(U+V)+W = \{uv+w: uv \in U+V, w \in W\} = \{(u+v)+w: u \in U, v \in V, w \in W\} = \{u+(v+w): u \in U, v \in V, w \in W\} = \{u+vw: u \in U, vw \in V+W\} = U+(V+W)$
+- Asociatividad:\
+$(U+V)+W = \{uv+w: uv \in U+V, w \in W\} \\= \{(u+v)+w: u \in U, v \in V, w \in W\} \\= \{u+(v+w): u \in U, v \in V, w \in W\} \\= \{u+vw: u \in U, vw \in V+W\} \\= U+(V+W)$
 
-Idempotencia:
-    U+U = {u+u’: u \in U, u’ in U} 
-= (Clausura de la suma)
- {u’’: u \in U} = U
+- Idempotencia:\
+$U+U = \{u+u’: u \in U, u’ \in U\}$ \
+=(Clausura de la suma)\
+$\{u’’: u \in U\} = U$
 
-Absorción:
-    U + (U \intersection V) = U
-    U + (U \intersection V) = {u+uv: u \in U, uv \in U, uv \in V}
-= (Clausura de la suma)
- {u’’: u \in U} = U
+- Absorción:\
+    - $U + (U \cap V) = U$:\
+    $U + (U \cap V) = \{u+uv: u \in U, uv \in U, u \in V\}$ \
+    = (Clausura de la suma) \
+    $\{u’’: u \in U\} = U$
 
-    U \interseccion (U + V)
-
-    Como U \subset U+V, U \interseccion U+V = U
+    - $U \cap (U + V)$:\
+    Como $U \subset U+V \implies U \cap U+V = U$
 
 
 d) ́Algebra de Lindenbaum-Tarski.
