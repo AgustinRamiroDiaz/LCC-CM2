@@ -10,16 +10,17 @@ preordenados:
 - simetricas
 
 parcialmente ordenados (Partially Ordered SET, POSET):
-reflexivas
-transitivas
-antisimétricas
+- reflexivas
+- transitivas
+- antisimétricas
 
 retículo/lattice:
-Poset (L, <=)
-∀ x, y ∈ L, ヨ sup{x, y}, inf{x, y}
+- Poset (L, <=)
+- $\forall x, y \in L, \exists \sup \{x, y\}, \inf\{x, y\}$
 
-2. Mostrar que los siguientes posets son ret ́ıculos:
-a) (P(X),⊆).
+# 2. Mostrar que los siguientes posets son ret ́ıculos:
+
+## a) $(P(X),\subseteq)$.
 
 Sean x, y ∈ P(X). Tenemos que ver que ヨ sup e inf de {x, y}
 Proponemos sup = U e inf = ∩
@@ -38,11 +39,15 @@ x | n ⇔ x mod n = 0
 sup{x, y} = mcd(x, y) = min({d : x | d, y | d}) por definición
 inf = mcm
 
-c) (L,⊆), donde L es el conjunto de subespacios vectoriales de Rn.
-sup = ∨ = +
-inf = \land = \interseccion
+## c) $(L, \subseteq)$, donde L es el conjunto de subespacios vectoriales de Rn.
 
-Intentamos demostrar con la definición alternativa de retículos Asociatividad ∀x , y , z ∈L,
+Intentemos demostrar con la definición alternativa de retículos
+
+Proponemos:
+- $\lor = + $
+- $\land = \cap $
+
+Asociatividad ∀x , y , z ∈L,
 {
 x ∨(y ∨z ) = (x ∨y ) ∨z
 x ∧(y ∧z ) = (x ∧y ) ∧z
@@ -61,10 +66,12 @@ x ∧(x ∨y ) = x
 }
 
 la suma de espacios vectoriales es asociativa y conmutativa por AL
-Conmutatividad: 
-U+V = {u+v: u \in U, v \in V} = {v+u: u \in U, v \in V} = V+U
-Asociatividad:
-(U+V)+W = {uv+w: uv \in U+V, w \in W} = {(u+v)+w: u \in U, v \in V, w \in W} = {u+(v+w): u \in U, v \in V, w \in W} = {u+vw: u \in U, vw \in V+W} = U+(V+W)
+
+- Conmutatividad: 
+$U+V = \{u+v: u \in U, v \in V\} = \{v+u: u \in U, v \in V\} = V+U$
+
+- Asociatividad:
+$(U+V)+W = \{uv+w: uv \in U+V, w \in W\} = \{(u+v)+w: u \in U, v \in V, w \in W\} = \{u+(v+w): u \in U, v \in V, w \in W\} = \{u+vw: u \in U, vw \in V+W\} = U+(V+W)$
 
 Idempotencia:
     U+U = {u+u’: u \in U, u’ in U} 
