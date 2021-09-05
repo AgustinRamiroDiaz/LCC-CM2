@@ -220,9 +220,6 @@ $x \lor x = x \iff x \leq x$
     - $a \lor b = b \lor a$ por asociatividad
     - $\therefore a = b$
 
-
-
-
 Además queremos ver que para todo a, b en L existan supremo e infimo.
 
 Definamos supremo como $\lor$ e infimo como $\land$
