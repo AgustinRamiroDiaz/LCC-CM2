@@ -134,25 +134,46 @@ $\iff$ (x es cota inferior de y)
 
 $\inf \{x, y\} = \max \{c: c \leq x, c \leq y\} = x$
 
-d) Asociatividad:
+## d) Asociatividad:
 
 (x ∨y) ∨z = x ∨(y ∨z).
 
+$(x \lor y) \lor z = \sup \{\sup \{x, y\}, z\}$
+
+$= \min \{ c: \sup \{x, y\} \leq c, z \leq c \}$
+
+$= \min \{ c: (\min \{k: x \leq k, y \leq k\}) \leq c, z \leq c \}$
+
+$\iff$ (min de min)
+
+$= \min \{ c: x \leq c, y \leq c, z \leq c \}$
+
 (x ∧y) ∧z = x ∧(y ∧z).
+Análogo
 
-e) Conmutatividad:
+## e) Conmutatividad:
 
-x ∨y = y ∨x.
+$x \lor y = \sup \{x, y\} = \sup \{y, x\} = y \lor x$
 
-x ∧y = y ∧x.
 
-f) Idempotencia:
+x ∧y = y ∧x. Analogo
+
+## f) Idempotencia:
 
 x ∨x = x = x ∧x.
 
-g) Absorci ́on:
+$x \lor x = \sup \{x, x\} = x$
+
+
+## g) Absorción:
 
 x ∨(x ∧y) = x = x ∧(x ∨y).
+
+$x \land y \leq x \implies x \lor (x \land y) = x$
+
+$x \leq x \lor y \implies x = x \land (x \lor y)$
+
+$x \lor ($
 
 h) Compatibilidad:
 
