@@ -15,7 +15,7 @@ Conjuntos parcialmente ordenados (Partially Ordered SET, POSET):
 - antisimétricas
 
 retículo/lattice:
-- Poset $(L, <=)$
+- Poset $(L, \leq)$
 - $\forall x, y \in L, \exists \sup \{x, y\}, \inf\{x, y\}$
 
 # 2. Mostrar que los siguientes posets son ret ́ıculos:
@@ -110,19 +110,29 @@ Probar que para todo x,y,z,w ∈L, ∨ y ∧ verifican las siguientes propiedade
 
 ## a) x ≤ x ∨ y.
 
-$x \lor y = \sup \{x, y\} = \min \{c: x <= c, y <= c\}$
+$x \lor y = \sup \{x, y\} = \min \{c: x \leq c, y \leq c\}$
 
 $\therefore x \leq x \lor y$
 
 ## b) x ∧y ≤x.
 
-$x \land y = \inf \{x, y\} = \max \{c: c <= x, c <= y\}$
+$x \land y = \inf \{x, y\} = \max \{c: c \leq x, c \leq y\}$
 
 $\therefore x \land y \leq x$
 
 ## c) x ≤y ⇔x ∨y = y ⇔x ∧y = x.
 
-$x \leq y = $
+=>)
+
+$x \lor y = \sup \{x, y\} = \min \{c: x \leq c, y \leq c\} = y$
+
+$\iff$ (y es cota superior de x)
+
+$x \leq y$
+
+$\iff$ (x es cota inferior de y)
+
+$\inf \{x, y\} = \max \{c: c \leq x, c \leq y\} = x$
 
 d) Asociatividad:
 
