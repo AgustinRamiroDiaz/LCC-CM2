@@ -15,7 +15,7 @@ Conjuntos parcialmente ordenados (Partially Ordered SET, POSET):
 - antisimétricas
 
 retículo/lattice:
-- Poset $(L, \leq)$
+- Poset $(L, \le)$
 - $\forall x, y \in L, \exists \sup \{x, y\}, \inf\{x, y\}$
 
 # 2. Mostrar que los siguientes posets son ret ́ıculos:
@@ -110,29 +110,29 @@ Probar que para todo x,y,z,w ∈L, ∨ y ∧ verifican las siguientes propiedade
 
 ## a) x ≤ x ∨ y.
 
-$x \lor y = \sup \{x, y\} = \min \{c: x \leq c, y \leq c\}$
+$x \lor y = \sup \{x, y\} = \min \{c: x \le c, y \le c\}$
 
-$\therefore x \leq x \lor y$
+$\therefore x \le x \lor y$
 
 ## b) x ∧y ≤x.
 
-$x \land y = \inf \{x, y\} = \max \{c: c \leq x, c \leq y\}$
+$x \land y = \inf \{x, y\} = \max \{c: c \le x, c \le y\}$
 
-$\therefore x \land y \leq x$
+$\therefore x \land y \le x$
 
 ## c) x ≤y ⇔x ∨y = y ⇔x ∧y = x.
 
 =>)
 
-$x \lor y = \sup \{x, y\} = \min \{c: x \leq c, y \leq c\} = y$
+$x \lor y = \sup \{x, y\} = \min \{c: x \le c, y \le c\} = y$
 
 $\iff$ (y es cota superior de x)
 
-$x \leq y$
+$x \le y$
 
 $\iff$ (x es cota inferior de y)
 
-$\inf \{x, y\} = \max \{c: c \leq x, c \leq y\} = x$
+$\inf \{x, y\} = \max \{c: c \le x, c \le y\} = x$
 
 ## d) Asociatividad:
 
@@ -140,13 +140,13 @@ $\inf \{x, y\} = \max \{c: c \leq x, c \leq y\} = x$
 
 $(x \lor y) \lor z = \sup \{\sup \{x, y\}, z\}$
 
-$= \min \{ c: \sup \{x, y\} \leq c, z \leq c \}$
+$= \min \{ c: \sup \{x, y\} \le c, z \le c \}$
 
-$= \min \{ c: (\min \{k: x \leq k, y \leq k\}) \leq c, z \leq c \}$
+$= \min \{ c: (\min \{k: x \le k, y \le k\}) \le c, z \le c \}$
 
 $\iff$ (min de min)
 
-$= \min \{ c: x \leq c, y \leq c, z \leq c \}$
+$= \min \{ c: x \le c, y \le c, z \le c \}$
 
 (x ∧y) ∧z = x ∧(y ∧z).
 Análogo
@@ -169,19 +169,19 @@ $x \lor x = \sup \{x, x\} = x$
 
 x ∨(x ∧y) = x = x ∧(x ∨y).
 
-$x \land y \leq x \implies x \lor (x \land y) = x$
+$x \land y \le x \implies x \lor (x \land y) = x$
 
-$x \leq x \lor y \implies x = x \land (x \lor y)$
+$x \le x \lor y \implies x = x \land (x \lor y)$
 
 h) Compatibilidad:
 
 x ≤z, y ≤w ⇒ x ∨y ≤z ∨w, x ∧y ≤z ∧w
 
-$x \leq z \leq z \lor w$
+$x \le z \le z \lor w$
 
-$y \leq w \leq z \lor w$
+$y \le w \le z \lor w$
 
-Por lo tanto $z \lor w$ es cota superior de {x, y} y por ende $x \lor y \leq z \lor w$
+Por lo tanto $z \lor w$ es cota superior de {x, y} y por ende $x \lor y \le z \lor w$
 
 # 4)
 
@@ -206,17 +206,17 @@ Demostración:
 
 Veamos que es poset:
 - Reflexividad: Por idempotencia y la definición de la relación <= sabemos que\
-$x \lor x = x \iff x \leq x$
+$x \lor x = x \iff x \le x$
 
-- Transitividad: Sean $a, b, c \in L : a\leq b \leq c$ veamos que $a \leq c$:
-    - $a \leq b \iff a \lor b = b$
-    - $b \leq c \iff b \lor c = c$
+- Transitividad: Sean $a, b, c \in L : a\le b \le c$ veamos que $a \le c$:
+    - $a \le b \iff a \lor b = b$
+    - $b \le c \iff b \lor c = c$
     - $c = b \lor c = (a \lor b) \lor c = a \lor (b \lor c) = a \lor c$ por asociatividad
-    - $\therefore a \leq c$ por def
+    - $\therefore a \le c$ por def
 
-- Antisimetría: Sean $a, b \in L : a\leq b, b \leq a$ veamos que $a = b$:
-    - $a \leq b \iff a \lor b = b$
-    - $b \leq a \iff b \lor a = a$
+- Antisimetría: Sean $a, b \in L : a\le b, b \le a$ veamos que $a = b$:
+    - $a \le b \iff a \lor b = b$
+    - $b \le a \iff b \lor a = a$
     - $a \lor b = b \lor a$ por asociatividad
     - $\therefore a = b$
 
@@ -226,6 +226,23 @@ Definamos supremo como $\lor$ e infimo como $\land$ y veamos que efectivamente c
 
 Veamos que cumple ser cota superior
 
-$a \leq a \lor b \iff a \lor (a \lor b) = a \lor b \iff (a \lor a) \lor b = a \lor b \iff a \lor b = a \lor b$
+$a \le a \lor b \iff a \lor (a \lor b) = a \lor b \iff (a \lor a) \lor b = a \lor b \iff a \lor b = a \lor b$
 
 
+Veamos que es la más chica. Supongamos que $\exist c : a,b \le c < a \lor b$
+
+
+x ≤y ⇔x ∨y = y
+
+Entonces tenemos que 
+
+$a \lor c = c$
+
+$b \lor c = c$
+
+
+$(a \lor c) \lor (b \lor c) = c \lor c$
+
+$(a \lor b) \lor c = c$
+
+$a \lor b \le c$ Absurdo
