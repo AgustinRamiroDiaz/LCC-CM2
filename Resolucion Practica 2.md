@@ -44,8 +44,8 @@ inf = mcm
 Intentemos demostrar con la definición alternativa de retículos
 
 Proponemos:
-- $\lor = + $
-- $\land = \cap $
+- $\lor = +$
+- $\land = \cap$
 
 Debemos probar:
 - Asociatividad ∀x , y , z ∈L,
@@ -102,7 +102,7 @@ d) Álgebra de Lindenbaum-Tarski.
 
 
 
-# Sea (L,≤) un retículo. Se definen las operaciones:
+# 3) Sea (L,≤) un retículo. Se definen las operaciones:
 - x ∨ y = sup{x,y}
 - x ∧ y = inf{x,y}
 
@@ -121,8 +121,6 @@ $x \land y = \inf \{x, y\} = \max \{c: c \le x, c \le y\}$
 $\therefore x \land y \le x$
 
 ## c) x ≤y ⇔x ∨y = y ⇔x ∧y = x.
-
-=>)
 
 $x \lor y = \sup \{x, y\} = \min \{c: x \le c, y \le c\} = y$
 
@@ -246,3 +244,95 @@ $(a \lor c) \lor (b \lor c) = c \lor c$
 $(a \lor b) \lor c = c$
 
 $a \lor b \le c$ Absurdo
+
+
+# 5b)
+## b) f : L1 →L2 es un isomorfismo de ret ́ıculo si y solo si f : Lord1 →Lord2 es un isomorfismo de orden.
+
+---
+
+### Teoría Algebra
+
+f es morfismo si 
+  - $f(x \lor y) = f(x) \lor f(y)$ 
+  - $f(x \land y) = f(x) \land f(y)$
+
+f: L -> L' es isomorfismo <=> f es morfismo de reticulo y es biyectiva
+
+---
+
+### Teoría Orden
+
+f es morfismo si 
+  - $x \le y \implies f(x) \le f(y)$ 
+
+f es antimorfismo si 
+  - $x \le y \implies f(y) \le f(x)$ 
+
+f: L -> L' es isomorfismo <=> f es biyectiva y:
+
+  - $x \le y \iff f(x) \le f(y)$ 
+
+f: L -> L' es antiisomorfismo <=> f es biyectiva y:
+  - $x \le y \iff f(y) \le f(x)$ 
+
+---
+=>)
+
+f biyectiva, listo
+
+queremos ver que $x \le y \iff f(x) \le f(y)$
+
+$x \le y \implies f(x) \le f(y)$ (a)
+
+$f(x) \le f(y) \implies x \le y$ 
+
+Sabemos:
+- $x \le y \iff x \lor y = y \iff x \land y = x$ (1)
+- $f(x \lor y) = f(x) \lor f(y)$ 
+- $f(x \land y) = f(x) \land f(y)$
+- $f(x) \le f(y)$ 
+
+Entonces 
+$f(x) \le f(y) \iff f(x) \lor f(y) = f(y)$ por (1)
+
+Por lo tanto
+$f(x \lor y) = f(y)$
+
+# 9) Sea (L,≤) retículo y (L,∨,∧) su ret ́ıculo asociado. Mostrar que son equivalentes:
+
+- a) L tiene maximo (resp. mınimo).
+    es decir $\exists 1: x \le 1 \forall x, (\exists 0: 0 \le x \forall x)$
+
+
+- b) Existe 1 ∈ L tal que x = x ∧1 para todo x ∈ L (resp. existe 0 ∈ L tal que x = x ∨0 para todo
+x ∈L).
+
+- c) Existe 1 ∈ L tal que 1 = x ∨1 para todo x ∈ L (resp. existe 0 ∈ L tal que 0 = x ∧0 para todo
+x ∈L).
+
+a <=> b <=> c:
+Sabemos que
+- $\exists 1: x \le 1 \forall x$ \
+    $x \le 1 \iff x \lor 1 = 1 \iff  x \land 1 = x$ (3c)
+ 
+- $\exists 0: 0 \le x \forall x$ \
+   $0 \le x \iff 0 \lor x = x \iff  0 \land x = 0$ (3c)
+
+
+
+<= 
+- trans
+- antisim
+- reflex
+
+$L \lor \land$
+
+
+$\forall x, y ~ \exists \sup\{x, y\}, \inf\{x, y\}$
+
+$sup(x, y) = x \lor y$
+
+$x \le y \iff x \lor y = y$
+
+
