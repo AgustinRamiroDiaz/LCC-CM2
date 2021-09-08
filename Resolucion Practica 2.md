@@ -401,7 +401,7 @@ En particular, sea A = \{x} y B = \{y} (singuletes del conjunto partes)
 
 Por (1) tenemos:
 
-G(A) = G(B) = \{f(x)} (2)
+G(A) = G(B) = \{ f(x) } (2)
 
 Sabemos que G es morfismo de retículo, con lo cual tenemos:
 
@@ -411,13 +411,15 @@ Al ser x $\neq$ y => A $\cap$ B = $\emptyset$ (3)
 
 Con lo cual por (2) y (3) tenemos que:
 
-G(A $\land$ B) =$^{(3)}$ G($\emptyset$) = $\emptyset =^{(2)}$ \{ f(x) }=> ¡Absurdo!
+G(A $\land$ B) =$^{(3)}$ G($\emptyset$) = $\emptyset =^{(2)}$ \{ f(x) } => ¡Absurdo!
 
 Luego, x = y
 
 
 <=)
 Supongamos que f es inyectiva, es decir f(x) = f(y) => x = y
+
+O lo que es lo mismo, x $\neq$ y => f(x) $\neq$ f(y)
 
 Queremos ver que 
   - $G(x \lor y) = G(x) \lor G(y)$ 
@@ -448,20 +450,35 @@ Sabemos que
 - $\exists 0: 0 \le x \forall x$ \
    $0 \le x \iff 0 \lor x = x \iff  0 \land x = 0$ (3c)
 
+---
+
+# 23) Probar que un orden total es un reticulo distributivo
+
+Al ser un retículo total, sabemos que podemos comparar todos los elementos entre sí en una cadena
+
+Necesitamos probar la propiedad distributiva:
+$$x \lor (y \land z) = (x \lor y) \land (x \lor z)$$
+
+Que es equivalente con un renombramiento de variables a:
+$$x \lor (z \land y) = (x \lor z) \land (x \lor y)$$
+
+Entonces si queremos probar estas reglas para cualquier posible orden entre x,y,z, solo será necesario probarlo para la mitad ya que son equivalentes ante el renombre de variables:
+- $x \le y \le z \leftrightsquigarrow x \le z \le y$
+- $y \le x \le z \leftrightsquigarrow z \le x \le y$
+- $y \le z \le x \leftrightsquigarrow z \le y \le x$
 
 
-<= 
-- trans
-- antisim
-- reflex
-
-$L \lor \land$
-
-
-$\forall x, y ~ \exists \sup\{x, y\}, \inf\{x, y\}$
-
-$sup(x, y) = x \lor y$
-
-$x \le y \iff x \lor y = y$
-
-
+Entonces probemos los 3 casos:
+- $x \le y \le z$
+  - $x \lor (y \land z) = (x \lor y) \land (x \lor z) \iff$
+  - $x \lor y = y \land z \iff$
+  - $x \lor y = y \land z \iff$
+  - $y = y$
+- $y \le x \le z$
+  - $x \lor (y \land z) = (x \lor y) \land (x \lor z) \iff$
+  - $x \lor y = x \land z \iff$
+  - $x = x$
+- $y \le z \le x$
+  - $x \lor (y \land z) = (x \lor y) \land (x \lor z) \iff$
+  - $x \lor y = x \land x \iff$
+  - $x = x $
