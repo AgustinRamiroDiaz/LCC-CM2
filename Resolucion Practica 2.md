@@ -411,9 +411,18 @@ Al ser x $\neq$ y => A $\cap$ B = $\emptyset$ (3)
 
 Con lo cual por (2) y (3) tenemos que:
 
-G(A $\land$ B) = \{ f(x) } = $\emptyset$ => ¡Absurdo!
+G(A $\land$ B) =$^{(3)}$ G($\emptyset$) = $\emptyset =^{(2)}$ \{ f(x) }=> ¡Absurdo!
 
 Luego, x = y
+
+
+<=)
+Supongamos que f es inyectiva, es decir f(x) = f(y) => x = y
+
+Queremos ver que 
+  - $G(x \lor y) = G(x) \lor G(y)$ 
+  - $G(x \land y) = G(x) \land G(y)$
+
 
 
 ---
