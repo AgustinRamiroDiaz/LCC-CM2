@@ -285,8 +285,6 @@ queremos ver que $x \le y \iff f(x) \le f(y)$
 
 $x \le y \implies f(x) \le f(y)$ (a)
 
-$f(x) \le f(y) \implies x \le y$ 
-
 Sabemos:
 - $x \le y \iff x \lor y = y \iff x \land y = x$ (1)
 - $f(x \lor y) = f(x) \lor f(y)$ 
@@ -297,7 +295,129 @@ Entonces
 $f(x) \le f(y) \iff f(x) \lor f(y) = f(y)$ por (1)
 
 Por lo tanto
-$f(x \lor y) = f(y)$
+$f(x \lor y) = f(y) \iff x \lor y = y \iff x \le y$
+
+
+<=)
+
+f biyectiva, listo
+
+queremos ver que $f(x \lor y) = f(x) \lor f(y)$
+
+Sabemos:
+- $x \le y \iff x \lor y = y \iff x \land y = x$ (1)
+- $f(x) \le f(y) \iff x \le y$ 
+- $x \le y \iff x\lor y = y \iff f(x \lor y) = f(y)$
+- $x \le y \iff f(x) \le f(y) \iff f(x) \lor f(y) = f(y)$
+
+Entonces:
+$f(x \lor y) = f(y) \iff  f(x) \lor f(y) = f(y)$
+
+
+$x \leq y \iff f(x \lor y) = f (y), f(x) \lor f(y) = f(y) \iff f(x \lor y) = f(x) \lor f(y)$
+
+
+# 6 Sea una funci ́on f : X →Y . Considerar las funciones:
+F : P(Y) → P(X), F(B) = $f^{-1}$(B) (imagen inversa)
+
+G : P(X) → P(Y), G(A) = f(A) (imagen directa)
+
+a) Mostrar que F define un morfismo de retículo.
+
+---
+### Teoría Algebra
+
+f es morfismo si 
+  - $f(x \lor y) = f(x) \lor f(y)$ 
+  - $f(x \land y) = f(x) \land f(y)$
+
+---
+
+Queremos ver que F es morfismo de $(P(Y), \lor, \land) \rightarrow (P(X), \lor, \land)$
+
+
+Queremos ver que
+$F(y \lor y') = F(y)\lor F(y')$
+
+$f^{-1}(y \lor y') = f^{-1}(y) \lor f^{-1}(y')$
+
+
+$\{f^{-1}(e): e \in (y \lor y')\} = \{f^{-1}(e): e \in y\} \lor \{f^{-1}(e): e \in y'\}$
+
+$\{f^{-1}(e): e \in (y \cup y')\} = \{f^{-1}(e): e \in y\} \cup \{f^{-1}(e): e \in y'\}$
+
+$\{f^{-1}(e): e \in (y \cup y')\} = \{f^{-1}(e): e \in y \ \text{o} \ e \in y'\}$
+
+QUED
+
+---
+
+b) Mostrar que G define un morfismo de ret ́ıculo si y solo si f es inyectiva.
+
+=>) Sabemos que G define un morfismo de retículo, es decir
+  - $G(x \lor y) = G(x) \lor G(y)$ 
+  - $G(x \land y) = G(x) \land G(y)$
+
+
+Queremos ver que es inyectiva, es decir que 
+
+f(x) = f(y) => x = y
+
+Suponemos que f(x) = f(y) y x != y
+
+$p \in G(x) \iff p \in G(y)$
+
+p = {f(e), $e \in x$} y p 
+
+
+
+
+
+---
+
+
+Queremos ver que es inyectiva, es decir que 
+
+f(x) = f(y) => x = y
+
+Suponemos que f(x) = f(y)
+
+G({x} $\lor$ {y}) = G({x}) $\lor$ G({y}) = G({x}) $\lor$ G({x}) = G({x})
+
+G({x} $\lor$ {y}) = G({x}) $\lor$ G({y}) = G({y})
+
+G({y}) = G({x}) $\implies$ {y} = {x}
+
+---
+Queremos ver que es inyectiva, es decir que 
+
+f(x) = f(y) => x = y
+
+Supongamos que f(x) = f(y)     (1)
+
+Sea x $\neq$ y $\in$ X.
+
+En particular, sea A = \{x} y B = \{y} (singuletes del conjunto partes)
+
+Por (1) tenemos:
+
+G(A) = G(B) = \{f(x)} (2)
+
+Sabemos que G es morfismo de retículo, con lo cual tenemos:
+
+$G(A \land B) = G(A) \land G(B)$
+
+Al ser x $\neq$ y => A $\cap$ B = $\emptyset$ (3)
+
+Con lo cual por (2) y (3) tenemos que:
+
+G(A $\land$ B) = \{ f(x) } = $\emptyset$ => ¡Absurdo!
+
+Luego, x = y
+
+
+---
+
 
 # 9) Sea (L,≤) retículo y (L,∨,∧) su ret ́ıculo asociado. Mostrar que son equivalentes:
 
@@ -305,10 +425,10 @@ $f(x \lor y) = f(y)$
     es decir $\exists 1: x \le 1 \forall x, (\exists 0: 0 \le x \forall x)$
 
 
-- b) Existe 1 ∈ L tal que x = x ∧1 para todo x ∈ L (resp. existe 0 ∈ L tal que x = x ∨0 para todo
+- b) Existe 1 ∈ L tal que x = x ∧1 para todo x ∈ L (resp. existe 0 ∈ L tal que x = x ∨ 0 para todo
 x ∈L).
 
-- c) Existe 1 ∈ L tal que 1 = x ∨1 para todo x ∈ L (resp. existe 0 ∈ L tal que 0 = x ∧0 para todo
+- c) Existe 1 ∈ L tal que 1 = x ∨1 para todo x ∈ L (resp. existe 0 ∈ L tal que 0 = x ∧ 0 para todo
 x ∈L).
 
 a <=> b <=> c:
