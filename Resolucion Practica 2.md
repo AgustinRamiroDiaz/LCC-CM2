@@ -454,7 +454,7 @@ Sabemos que
 
 # 23) Probar que un orden total es un reticulo distributivo
 
-Al ser un retículo total, sabemos que podemos comparar todos los elementos entre sí en una cadena
+Al ser un retículo total, sabemos que podemos comparar todos los elementos entre sí en una cadena de la forma $x \le y \le z$
 
 Necesitamos probar la propiedad distributiva:
 $$x \lor (y \land z) = (x \lor y) \land (x \lor z)$$
@@ -462,10 +462,11 @@ $$x \lor (y \land z) = (x \lor y) \land (x \lor z)$$
 Que es equivalente con un renombramiento de variables a:
 $$x \lor (z \land y) = (x \lor z) \land (x \lor y)$$
 
-Entonces si queremos probar estas reglas para cualquier posible orden entre x,y,z, solo será necesario probarlo para la mitad ya que son equivalentes ante el renombre de variables:
+Entonces si queremos probar estas reglas para cualquier posible orden entre x,y,z, solo será necesario probarlo para la mitad ya que son equivalentes ante el renombramiento de variables:
 - $x \le y \le z \leftrightsquigarrow x \le z \le y$
 - $y \le x \le z \leftrightsquigarrow z \le x \le y$
 - $y \le z \le x \leftrightsquigarrow z \le y \le x$
+- $x \lor (y \land z) = (x \lor y) \land (x \lor z) \leftrightsquigarrow x \lor (z \land y) = (x \lor z) \land (x \lor y)$
 
 
 Entonces probemos los 3 casos:
@@ -481,4 +482,14 @@ Entonces probemos los 3 casos:
 - $y \le z \le x$
   - $x \lor (y \land z) = (x \lor y) \land (x \lor z) \iff$
   - $x \lor y = x \land x \iff$
-  - $x = x $
+  - $x = x$
+
+
+
+
+# 24) Probar que son equivalentes:
+
+- a) a ≤c ⇒a ∨(b ∧c) = (a ∨b) ∧c para todos a,b,c ∈L.
+- b) a ≥c ⇒a ∧(b ∨c) = (a ∧b) ∨c para todos a,b,c ∈L.
+- c) a ∨(b ∧(a ∨c)) = (a ∨b) ∧(a ∨c) para todos a,b,c ∈L
+- d) a ∧(b ∨(a ∧c)) = (a ∧b) ∨(a ∧c) para todos a,b,c ∈L
