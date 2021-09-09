@@ -493,3 +493,33 @@ Entonces probemos los 3 casos:
 - b) a ≥c ⇒a ∧(b ∨c) = (a ∧b) ∨c para todos a,b,c ∈L.
 - c) a ∨(b ∧(a ∨c)) = (a ∨b) ∧(a ∨c) para todos a,b,c ∈L
 - d) a ∧(b ∨(a ∧c)) = (a ∧b) ∨(a ∧c) para todos a,b,c ∈L
+
+## a <=> c
+- a) a ≤c ⇒a ∨(b ∧c) = (a ∨b) ∧c
+
+Partiendo desde a, podemos hacer un renombramiento de a con c y nos queda
+
+- c ≤a ⇒c ∨(b ∧a) = (c ∨b) ∧ a 
+
+Luego, reordenando y aplicando la propiedad conmutativa
+- a ≥ c ⇒ c ∨(b ∧a) = (c ∨b) ∧ a 
+- a ≥ c ⇒ a ∧ (c ∨b) = (b ∧a) ∨ c
+- a ≥ c ⇒ a ∧ (b ∨ c) = (a ∧ b) ∨ c
+
+Como todos los pasos son <=> queda demostrado.
+
+## a => c
+Por a tenemos que 
+$a \lor c = c ⇒a \lor (b \land c) = (a \lor b) \land c$
+
+
+## c => a
+Suponemos 
+$a \lor c = c$
+
+Y queremos llegar a que 
+$a \lor (b \land c) = (a \lor b) \land c$
+
+Desarrollamos
+- $a \lor (b \land (a \lor c)) = (a \lor b) \land (a \lor c)$
+- $= a \lor (b \land c) =  (a \lor b) \land c$
