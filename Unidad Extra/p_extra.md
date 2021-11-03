@@ -79,3 +79,5 @@ Entonces H es confiable:
 
 
 También funciona si la categoría C tiene una única flecha, pero no es tan interesante ni general 
+
+# 2. En el diagrama los cuatro trapecios conmutan
