@@ -17,6 +17,8 @@ Id
 - $F(G(id_C), G'(id_C))$
 - = G funtor
 - $F(id_{G(C)}, id_{G'(C)})$
+- = identidad en (G(C), G'(C)) (por definición de categoría producto)
+- $F(id_{(G(C), G'(C))})$
 - = F funtor
 - $id_{F(G(C), G'(C))}$
 - = def H
@@ -28,7 +30,7 @@ Composición:
 - $F(G(f \circ g), G'(f \circ g))$
 - = G funtor
 - $F(G(f) \circ G(g), G'(f) \circ G'(g))$
-- = composición en CxC
+- = composición de flechas en CxC
 - $F((G(f), G'(f)) \circ (G(g) \circ G'(g)))$
 - = F funtor
 - $F(G(f), G'(f)) \circ F(G(g) \circ G'(g))$
@@ -42,13 +44,13 @@ Recordemos las definiciones:
 - Functor confiable: inyectiva para flechas
 
 Para que sea completo se tiene que cumplir: 
-- $\forall y \in C, \exist x \in C :  H\langle G, G'\rangle (x) = y$
+- $\forall y \in morC, \exist x \in morC :  H\langle G, G'\rangle (x) = y$
 
 Es decir
 
 - $\forall y \in morC, \exist x \in morC :  F(G(x), G'(x)) = y$
 
-Veamos que si F, G y G' son funtores completos, entonces H es completo:
+Veamos que si F es completo, G y G' son completos sobre el "dominio" de F, entonces H es completo:
 
 - Como F es completo
     - $\forall y \in morC, \exist (z, z') \in morC \times C :  F(z, z') = y$
@@ -56,6 +58,8 @@ Veamos que si F, G y G' son funtores completos, entonces H es completo:
     - $\forall z \in morC, \exist x \in morC :  G(x) = z$
 
 Y por lo tanto H es completo
+
+Preguntar: la preimagen de G tiene que ser igual a la de G'
 
 ---
 
