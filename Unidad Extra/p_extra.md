@@ -11,20 +11,23 @@ Defino
 
 ## a) Probar que H es un funtor
 
-Id
-- $H\langle G, G'\rangle (id_C)$ 
+**Id**:
+Sea $X \in ob(C), id_X$ la identidad de $X$
+- $H\langle G, G'\rangle (id_X)$ 
 - = def H
-- $F(G(id_C), G'(id_C))$
+- $F(G(id_X), G'(id_X))$
 - = G funtor
-- $F(id_{G(C)}, id_{G'(C)})$
-- = identidad en (G(C), G'(C)) (por definición de categoría producto)
-- $F(id_{(G(C), G'(C))})$
+- $F(id_{G(X)}, id_{G'(X)})$
+- = identidad en (G(X), G'(X)) (por definición de categoría producto)
+- $F(id_{(G(X), G'(X))})$
 - = F funtor
-- $id_{F(G(C), G'(C))}$
+- $id_{F(G(X), G'(X))}$
 - = def H
-- $id_{H\langle  G,G'\rangle(C)}$
+- $id_{H \langle G,G'\rangle(X)}$
 
-Composición:
+**Composición**:
+Sea $f, g \in mor(C)$ tal que se pueden componer de la manera $f \circ g$:
+
 - $H\langle  G, G'\rangle (f \circ g)$ 
 - = def H
 - $F(G(f \circ g), G'(f \circ g))$
