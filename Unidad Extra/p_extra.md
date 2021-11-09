@@ -50,16 +50,15 @@ Es decir
 
 - $\forall y \in morC, \exist x \in morC :  F(G(x), G'(x)) = y$
 
-Veamos que si F es completo, G y G' son completos sobre el "dominio" de F, entonces H es completo:
-
-- Como F es completo
+Necesitamos :
+- F completo
     - $\forall y \in morC, \exist (z, z') \in morC \times C :  F(z, z') = y$
-- Como G (análogo G') es completo
-    - $\forall z \in morC, \exist x \in morC :  G(x) = z$
+- G y G' completos sobre el "dominio" de F
+    - $\exist x \in morC :  G(x) = z$
+    - $\exist x' \in morC :  G'(x') = z'$
+    - Además necesitamos que x=x'
 
-Y por lo tanto H es completo
-
-Preguntar: la preimagen de G tiene que ser igual a la de G'
+Y nos queda H completo
 
 ---
 
@@ -82,6 +81,5 @@ Entonces H es confiable:
 - $f = g$
 
 
-También funciona si la categoría C tiene una única flecha, pero no es tan interesante ni general 
-
 # 2. En el diagrama los cuatro trapecios conmutan
+En fotos
