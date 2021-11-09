@@ -53,10 +53,8 @@ Es decir
 Necesitamos :
 - F completo
     - $\forall y \in morC, \exist (z, z') \in morC \times C :  F(z, z') = y$
-- G y G' completos sobre el "dominio" de F
-    - $\exist x \in morC :  G(x) = z$
-    - $\exist x' \in morC :  G'(x') = z'$
-    - Además necesitamos que x=x'
+- Y que
+    - $\exists x \in morC: G(x) = z \land G'(x) = z'$
 
 Y nos queda H completo
 
